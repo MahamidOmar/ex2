@@ -15,7 +15,7 @@ Player::Player(string name, int maxHP , int force):
     {
         m_force = 5;
     }
-};
+}
 
 
 Player::Player(const Player& player)
