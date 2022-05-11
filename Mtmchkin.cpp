@@ -25,6 +25,18 @@ void Mtmchkin::playNextCard()
     m_cards[m_nextCard].applyEncounter(m_player);
     m_player.printInfo();
 
+    if(m_player.getLevel() == 10)
+    {
+        m_status = GameStatus::Win;
+    }
+    else
+    {
+        if(m_player.isKnockedOut())
+        {
+            m_status = GameStatus::Loss;
+        }
+    }
+
     if(m_nextCard == m_numberOfCards - 1)
     {
         m_nextCard = 0;
