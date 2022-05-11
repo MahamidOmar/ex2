@@ -6,6 +6,8 @@
 #define EX2_GAME_H
 #include "Card.h"
 #include <iostream>
+#include <string>
+using std::string;
 
 /*
  * GameStatus:
@@ -57,11 +59,17 @@ public:
      */
     GameStatus getGameStatus() const;
 
+    ~Mtmchkin();
+
     //TODO: complete the Mtmchkin class.
 
 private:
     //TODO: complete the Mtmchkin class.
-
+    Player m_player;
+    Card* m_cards;
+    int m_numberOfCards;
+    int m_nextCard;
+    GameStatus m_status;
 };
 
 
