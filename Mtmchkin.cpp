@@ -2,7 +2,6 @@
 
 #include "Mtmchkin.h"
 #include "Card.h"
-#include "Player.h"
 #include <iostream>
 
 Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards):

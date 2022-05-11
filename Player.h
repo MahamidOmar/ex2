@@ -16,106 +16,29 @@ public:
         m_name(name), m_level(1), m_force(force), m_maxHP(maxHP), m_HP(maxHP), m_coins(0) {};
 
     ~Player() = default;
-    Player(const Player& player)
-    {
-        this->m_name = player.m_name;
-        this->m_level = player.m_level;
-        this->m_force = player.m_force;
-        this->m_maxHP = player.m_maxHP;
-        this->m_HP = player.m_HP;
-        this->m_coins = player.m_coins;
-    }
+    Player(const Player& player);
 
-    Player& operator=(const Player& player)
-    {
-        this->m_name = player.m_name;
-        this->m_level = player.m_level;
-        this->m_force = player.m_force;
-        this->m_maxHP = player.m_maxHP;
-        this->m_HP = player.m_HP;
-        this->m_coins = player.m_coins;
-        return *this;
-    }
+    Player& operator=(const Player& player);
 
-    void printInfo() const
-    {
-        printPlayerInfo(m_name.c_str(), m_level, m_force, m_HP, m_coins);
-    }
+    void printInfo() const;
 
-    void levelUp()
-    {
-        if(m_level == 10)
-        {
-            return;
-        }
-        m_level++;
-    }
+    void levelUp();
 
-    int getLevel() const
-    {
-        return m_level;
-    }
+    int getLevel() const;
 
-    void buff(int toBuff)
-    {
-        if(toBuff <= 0)
-        {
-            return;
-        }
-        m_force += toBuff;
-    }
+    void buff(int toBuff);
 
-    void heal(int hp)
-    {
-        if(hp <= 0)
-        {
-            return;
-        }
-        m_HP += hp;
-        if(m_HP > m_maxHP)
-        {
-            m_HP = m_maxHP;
-        }
-    }
+    void heal(int hp);
 
-    void damage(int damage)
-    {
-        if(damage <= 0)
-        {
-            return;
-        }
-        m_HP -= damage;
-        if(m_HP < 0)
-        {
-            m_HP = 0;
-        }
-    }
+    void damage(int damage);
 
-    bool isKnockedOut() const
-    {
-        return m_HP == 0;
-    }
+    bool isKnockedOut() const;
 
-    void addCoins(int coins)
-    {
-        m_coins += coins;
-    }
+    void addCoins(int coins);
 
-    bool pay(int coins)
-    {
-        if(coins > m_coins)
-        {
-            return false;
-        }
-        m_coins -= coins;
-        return true;
-    }
+    bool pay(int coins);
 
-    int getAttackStrength()const
-    {
-        return m_level + m_force;
-    }
-
+    int getAttackStrength()const;
 
 
 private:
