@@ -100,6 +100,10 @@ bool Player::isKnockedOut() const
 
 void Player::addCoins(int coins)
 {
+    if(coins < 0)
+    {
+        return;
+    }
     m_coins += coins;
 }
 
