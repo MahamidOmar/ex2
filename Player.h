@@ -12,9 +12,7 @@ using std::string;
 class Player
 {
 public:
-    Player(string name, int maxHP = 100, int force = 5):
-        m_name(name), m_level(1), m_force(force), m_maxHP(maxHP), m_HP(maxHP), m_coins(0) {};
-
+    Player(string name, int maxHP = 100, int force = 5);
     ~Player() = default;
     Player(const Player& player);
 

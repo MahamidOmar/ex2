@@ -3,6 +3,21 @@
 #include <iostream>
 #include "Player.h"
 
+Player::Player(string name, int maxHP , int force):
+        m_name(name), m_level(1), m_force(force), m_maxHP(maxHP), m_HP(maxHP), m_coins(0)
+{
+    if(maxHP < 0)
+    {
+        m_maxHP = 100;
+        m_HP = 100;
+    }
+    if(force < 0)
+    {
+        m_force = 5;
+    }
+};
+
+
 Player::Player(const Player& player)
 {
     this->m_name = player.m_name;
