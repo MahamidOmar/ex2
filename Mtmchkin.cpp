@@ -5,7 +5,7 @@
 #include <iostream>
 
 Mtmchkin::Mtmchkin(const char* playerName, const Card* cardsArray, int numOfCards):
-        m_player(playerName), m_numberOfCards(numOfCards), m_status(GameStatus::MidGame), m_nextCard(0)
+        m_player(playerName), m_numberOfCards(numOfCards), m_nextCard(0), m_status(GameStatus::MidGame)
 {
     m_cards = new Card[numOfCards];
     for (int i = 0; i < numOfCards; ++i)
