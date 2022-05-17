@@ -14,8 +14,7 @@ class Player
 public:
     Player(string name, int maxHP = 100, int force = 5);
     ~Player() = default;
-    Player(const Player& player);
-
+    Player(const Player& player) = default;
     Player& operator=(const Player& player) = default;
 
     void printInfo() const;

@@ -17,7 +17,7 @@ Player::Player(string name, int maxHP , int force):
     }
 }
 
-
+/*
 Player::Player(const Player& player)
 {
     this->m_name = player.m_name;
@@ -26,18 +26,6 @@ Player::Player(const Player& player)
     this->m_maxHP = player.m_maxHP;
     this->m_HP = player.m_HP;
     this->m_coins = player.m_coins;
-}
-
-/*
-Player& Player::operator=(const Player& player)
-{
-    this->m_name = player.m_name;
-    this->m_level = player.m_level;
-    this->m_force = player.m_force;
-    this->m_maxHP = player.m_maxHP;
-    this->m_HP = player.m_HP;
-    this->m_coins = player.m_coins;
-    return *this;
 }
  */
 
