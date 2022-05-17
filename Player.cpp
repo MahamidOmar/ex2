@@ -28,6 +28,7 @@ Player::Player(const Player& player)
     this->m_coins = player.m_coins;
 }
 
+/*
 Player& Player::operator=(const Player& player)
 {
     this->m_name = player.m_name;
@@ -38,6 +39,7 @@ Player& Player::operator=(const Player& player)
     this->m_coins = player.m_coins;
     return *this;
 }
+ */
 
 void Player::printInfo() const
 {

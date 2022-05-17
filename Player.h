@@ -16,7 +16,7 @@ public:
     ~Player() = default;
     Player(const Player& player);
 
-    Player& operator=(const Player& player);
+    Player& operator=(const Player& player) = default;
 
     void printInfo() const;
 
